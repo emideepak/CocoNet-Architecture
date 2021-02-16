@@ -42,7 +42,7 @@ Install `Anaconda` from `https://www.anaconda.com/products/individual` and run t
 
 4. Run `CocoNetCNN.py` python on Anaconda.
 
-6. Run 'Testing_CocoNet.py' python on Anaconda.
+6. Run `Testing_CocoNet.py` python on Anaconda.
 
 5. The above steps are executed for both before and after cyclone SAR images.
 
