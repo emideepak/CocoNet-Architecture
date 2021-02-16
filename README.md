@@ -1,4 +1,3 @@
-# Coconet-Architecture
 # CocoNet Architecture for Coconut tree classification and change detection
 
 A hierarchical Deep Neural Network Model which runs on CNN and trained to Detect coconut trees.
@@ -33,8 +32,17 @@ Make sure that you have latest python version and type the following command in 
 
 `conda install imutils scikit-learn`
 
+Steps to execute the code :
 
+1. Initial Unsupervised KMeans clustering is performed in SNAP Geoprocessing tool.
 
+2. The vegetation area alone extracted with conversionImage.m MATLAB file.
+
+3. Supervised classification with trained CNN is performed with CocoNet.py python file.
+
+4. Change detection is performed with Changedetection.m MATLAB file.
+
+5. Original preprocessed image, KMeans results and other inputs are provided in its corresponding folders seperately. 
 
 
 
