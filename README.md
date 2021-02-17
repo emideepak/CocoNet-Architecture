@@ -41,7 +41,7 @@ Install `Anaconda` from `https://www.anaconda.com/products/individual` and run t
 
 3. Run `kmeansTreesSegmentation.m` on MATLAB.
 
-4. Run 'Testing_CocoNet.py' python code on Anaconda.
+4. Run `Testing_CocoNet.py` python code on Anaconda.
 
 5. The above steps are executed for both before and after cyclone SAR images.
 
