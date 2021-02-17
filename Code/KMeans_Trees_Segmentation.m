@@ -2,7 +2,7 @@
 Program:To extract the trees and mask out the other terrain classes
 Input: KMeans output before cyclone (KMeans_Before_Cyclone.tif)
        KMeans output after cyclone (KMeans_After_Cyclone.tif)
-Output: Change map of coconut trees (KMeans_Trees_Segmentation.jpg)
+Output: Change map of coconut trees (KMeans_Trees_Mask.jpg)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 close all;
@@ -26,7 +26,7 @@ for ii=1:size(imgg,1)
     end
 end
 figure,imshow(img1);
-imwrite(img1,['KMeans_Trees_Segmentation.jpg']);
+imwrite(img1,['KMeans_Trees_Mask.jpg']);
 img1=imresize(img1,[1992,1572]);
 dd=1;
 for ii=1:6:size(img1,1)
