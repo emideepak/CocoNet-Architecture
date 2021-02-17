@@ -1,7 +1,7 @@
 ############################################################
 # Program: Testing phase of CocoNet
 # Inputs: K-Means masked SAR image 
-#                    (kmeans_Trees_Segmentation.jpg)
+#                    (kmeans_Trees_Mask.jpg)
 # Output: Coconut trees shown in green colour 
 #                    (CNNOutput.jpg) 
 ############################################################
@@ -15,7 +15,7 @@ from tensorflow.keras.layers import Flatten
 from tensorflow.keras.layers import Dropout
 from tensorflow.keras.layers import Dense
 from tensorflow.keras import backend as K
-imgg=cv2.imread("kmeans_Trees_Segmentation.jpg")
+imgg=cv2.imread("kmeans_Trees_Mask.jpg")
 wholeImg1=cv2.resize(imgg,(1572,1992))
 final_img=wholeImg1
 pred_test = model.predict(Xtest)
