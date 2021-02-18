@@ -16,7 +16,7 @@ from tensorflow.keras.layers import Flatten
 from tensorflow.keras.layers import Dropout
 from tensorflow.keras.layers import Dense
 from tensorflow.keras import backend as K
-class sequential:
+class Coco:
     @staticmethod
     def build(width, height, depth, classes):
         # initialize the model
@@ -93,9 +93,9 @@ labels = np.array(labels)
 print(np.shape(data))
 
 
-# partition the data: 75% for training, 25% for validation
+# partition the data: 80% for training, 20% for validation
 (trainX, testX, trainY, testY) = train_test_split(data,
-	labels, test_size=0.3, random_state=42)
+	labels, test_size=0.2, random_state=42)
 
 
 # convert the labels from integers to vectors
@@ -108,7 +108,7 @@ aug = ImageDataGenerator(rotation_range=30, horizontal_flip=True,
 
 # initialize the model
 print("[INFO] compiling model...")
-model = sequential.build(width=6, height=6, depth=2, classes=2)
+model = Coco.build(width=6, height=6, depth=2, classes=2)
 opt = Adam(lr=INIT_LR, decay=INIT_LR / EPOCHS)
 model.compile(loss="binary_crossentropy", optimizer=opt,
 	metrics=["accuracy"])
