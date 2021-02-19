@@ -1,7 +1,7 @@
 ##################################################################################
 # Program: CNN for coconut tree 
 #          identification
-# Inputs:  6 X 6 SAR image patches, KMeans Tree Mask(kmeans_Trees_Segmentation.jpg) 
+# Inputs:  6 X 6 SAR image patches, KMeans Tree Mask(kmeans_Trees_Mask.jpg) 
 # Output: Identified coconut (CNNOutput.jpg)
 ###################################################################################
 
@@ -112,7 +112,7 @@ model.compile(loss="binary_crossentropy", optimizer=opt,
 	metrics=["accuracy"])
 
 
-imgg=cv2.imread("kmeans_Trees_Segmentation.jpg")
+imgg=cv2.imread("kmeans_Trees_Mask.jpg")
 wholeImg1=cv2.resize(imgg,(1572,1992))
 final_img=np.zeros((wholeImg1.shape[0],wholeImg1.shape[1],3))
 import tensorflow as tf 
